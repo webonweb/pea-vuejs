@@ -1,0 +1,1 @@
+export * from '@pea-vuejs/types/src/components/sepearator'

@@ -1,0 +1,29 @@
+{
+  "name": "pea-vuejs",
+  "version": "0.0.1",
+  "description": "An open-source UI vue component library.",
+  "main": "index.js",
+  "authors": {
+    "name": "Przemysław Drzewicki",
+    "email": "pea@webonweb.io"
+  },
+  "repository": "https://github.com/webonweb/pea-vuejs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "docs:preview": "vitepress preview src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3",
+    "tailwindcss": "^3.3.3",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

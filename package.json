@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "docs:dev": "cd ./docs && npm run dev",
+    "docs:build": "cd ./docs && npm run build",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "library:test": "cd ./packages/library/pea-vuejs && bun run test",
+    "library:publish": "cd ./packages/library/pea-vuejs && npm run pub:release",
+    "playground:install": "cd ./packages/playground/vue && bun install && cd .././nuxt && bun install",
+    "playground:vue": "cd ./packages/playground/vue && bun run dev",
+    "playground:nuxt": "cd ./packages/playground/nuxt && bun run dev",
+    "storybook:dev": "cd ./packages/library/pea-vuejs && bun run storybook:dev",
+    "storybook:build": "cd ./packages/library/pea-vuejs && bun run storybook:build"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "turbo": "latest"
+  },
+  "name": "pea-vuejs",
+  "packageManager": "bun@0.8.1",
+  "workspaces": [
+    "packages/*",
+    "packages/library/*"
+  ]
+}

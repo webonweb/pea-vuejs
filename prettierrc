@@ -1,0 +1,10 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "spaceBeforeFunctionParen": true,
+  "printWidth": 120,
+  "arrowParens": "avoid",
+  "rule-name": null
+}
