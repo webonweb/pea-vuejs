@@ -1,0 +1,47 @@
+body,
+html {
+  @apply font-poppins leading-tighter h-full;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 800px) {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+a {
+  @apply no-underline;
+}
+
+p {
+  a:not([class]) {
+    @apply underline;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      @apply no-underline;
+    }
+  }
+}
+
+input {
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+button {
+  &:focus,
+  &:active {
+    @apply outline-none;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}

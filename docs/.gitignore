@@ -1,12 +1,24 @@
-pids
-logs
-node_modules
-npm-debug.log
-coverage/
-run
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
 dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
 .DS_Store
-.nyc_output
-.basement
-config.local.js
-basement_dist
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example

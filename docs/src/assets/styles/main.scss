@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "reset";
+@import "fonts";
+@import "base";
+
+html,
+body,
+* {
+  @apply font-poppins leading-tighter;
+}
+
+body {
+  @apply bg-surface-600;
+}
