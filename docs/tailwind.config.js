@@ -4,7 +4,7 @@ export default {
   theme: {
     screens: {
       sm: "40rem",
-      smm: "56.25",
+      smm: "56.25rem",
       md: "71rem",
       lg: "80rem",
       xl: "96rem",
@@ -18,12 +18,18 @@ export default {
     },
     colors: {
       transparent: "transparent",
+      primary: {
+        100: "#d5e47c",
+        200: "#6c7c36",
+      },
       surface: {
         white: "#FFFFFF",
+        300: "#d9e6eb",
+        400: "#d9e6eb",
+        500: "#161f32",
         600: "#111827",
         black: "#000000",
       },
-      primary: {},
       secondary: {},
     },
     lineHeight: {
@@ -59,9 +65,9 @@ export default {
     container: false,
   },
   content: [
-    "components/**/*.{vue,js,ts}",
-    "layouts/**/*.vue",
-    "pages/**/*.vue",
+    "src/components/**/*.{vue,js,ts}",
+    "src/layouts/**/*.vue",
+    "src/pages/**/*.vue",
     "nuxt.config.{js,ts}",
   ],
   plugins: [],

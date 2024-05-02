@@ -13,5 +13,5 @@ body,
 }
 
 body {
-  @apply bg-surface-600;
+  @apply bg-surface-600 md:bg-[url('/images/background.png')] bg-[url('/images/background-mobile.png')]  bg-cover md:bg-contain bg-center md:bg-top bg-no-repeat;
 }
