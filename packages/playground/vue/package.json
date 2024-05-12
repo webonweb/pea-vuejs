@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
-    "pea-vuejs": "link:pea-vuejs"
+    "pea-vuejs": "workspace:*"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
