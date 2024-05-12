@@ -55,15 +55,14 @@ For changelog, visit [releases](https://github.com/webonweb/pea-vuejs/releases).
 ### Docs
 
 1. Clone the repo
-2. Run `bun install`
-3. Run `bun run build` to run build `pea-vuejs` locally
-4. Run `bun run docs:dev` to run vitepress
-5. Open `http://localhost:8080`
+2. Run `bun run install:pea-vuejs`
+3. Run `bun run docs:dev` to run vitepress
+4. Open `http://localhost:8080`
 
 ### Package
 
 1. Clone the repo
-2. Run `bun install`
+2. Run `bun run install:pea-vuejs`
 3. Run `bun run storybook:dev` to run storybook
 4. Open `http://localhost:6006`
 

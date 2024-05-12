@@ -13,17 +13,18 @@
     "playground:vue": "cd ./packages/playground/vue && bun run dev",
     "playground:nuxt": "cd ./packages/playground/nuxt && bun run dev",
     "storybook:dev": "cd ./packages/library/pea-vuejs && bun run storybook:dev",
-    "storybook:build": "cd ./packages/library/pea-vuejs && bun run storybook:build"
+    "storybook:build": "cd ./packages/library/pea-vuejs && bun run storybook:build",
+    "install:pea-vuejs": "cd ./packages/library/pea-vuejs && bun link && cd ../../../ && bun install",
+    "postinstall": "bun run build && bun run playground:install"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
     "turbo": "latest"
   },
-  "name": "pea-vuejs",
-  "packageManager": "bun@0.8.1",
+  "name": "pea-vuejs-library",
+  "packageManager": "bun@1.1.7",
   "workspaces": [
-    "packages/*",
     "packages/library/*"
   ]
 }
