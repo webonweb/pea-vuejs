@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+  :root {
+    --primary-100: #d5e47c;
+    --primary-200: #6c7c36;
+
+    --surface-white: #ffffff;
+    --surface-100: #d4d4d4;
+    --surface-200: #d9e6eb;
+    --surface-300: #161f32;
+    --surface-400: #111827;
+    --surface-500: #0d121b;
+    --surface-black: #000000;
+
+    --secondary-100: #2b354b;
+  }
+}
+
+:root {
+  --vp-button-brand-border: var(--primary-100);
+  --vp-button-brand-text: var(--surface-500);
+  --vp-button-brand-bg: var(--primary-100);
+  --vp-button-brand-hover-border: var(--primary-200);
+  --vp-button-brand-hover-text: var(--c-black-darker);
+  --vp-button-brand-hover-bg: var(--primary-200);
+  --vp-button-brand-active-border: var(--primary-200);
+  --vp-button-brand-active-text: var(--c-black-darker);
+  --vp-button-brand-active-bg: var(--primary-200);
+
+  --vp-button-alt-border: var(--primary-100);
+  --vp-button-alt-text: var(--surface-500);
+  --vp-button-alt-bg: var(--surface-200);
+  --vp-button-alt-hover-border: var(--surface-300);
+  --vp-button-alt-hover-text: var(--c-black-darker);
+  --vp-button-alt-hover-bg: var(--surface-300);
+  --vp-button-alt-active-border: var(--primary-200);
+  --vp-button-alt-active-text: var(--c-black-darker);
+  --vp-button-alt-active-bg: var(--primary-200);
+
+  --vp-sidebar-bg-color: var(--surface-500);
+
+  --vp-code-block-bg: var(--surface-100);
+}
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    360deg,
+    var(--primary-200) 40%,
+    var(--primary-100) 60%
+  );
+
+  --vp-font-family-base: "Poppins";
+  --vp-font-family-mono: "Poppins";
+
+  --vp-c-bg: var(--surface-400);
+
+  --vp-c-text-1: var(--surface-200);
+  --vp-c-text-2: #ebebf599;
+
+  --vp-nav-logo-height: 32px;
+
+  --vp-c-bg-soft: var(--surface-300);
+
+  --vp-c-gutter: var(--secondary-100);
+  --vp-c-divider: #d4d4d442;
+
+  --vp-c-brand-1: var(--primary-100);
+  --vp-c-brand-2: var(--primary-200);
+}
+
+.VPHero .name {
+  @apply text-5xl font-black sm:text-7xl md:text-8xl;
+}
+
+.VPHero .text {
+  @apply text-2xl font-semibold !mt-2 sm:!mt-3.5 sm:text-4xl md:!mt-6 md:text-[2.75rem];
+}
+
+.VPHero .tagline {
+  @apply !mt-1 sm:!mt-2 md:!mt-6;
+}
+
+.VPFeatures .box {
+  @apply bg-surface-300;
+}
+
+body {
+  @apply bg-no-repeat bg-top md:bg-[url(/images/background.webp)] bg-auto md:bg-contain bg-[url(/images/background-mobile.webp)];
+}
+
+.VPHero .VPImage.image-src {
+  @apply md:!max-w-full md:!max-h-full;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  @apply font-extrabold tracking-moderate;
+}
+
+.VPLink .text {
+  @apply text-surface-200;
+}
