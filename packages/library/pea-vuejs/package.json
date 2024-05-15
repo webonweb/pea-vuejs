@@ -52,19 +52,6 @@
         "default": "./dist/nuxt/index.mjs",
         "types": "./dist/nuxt/index.d.mts"
       }
-<<<<<<< HEAD
-=======
-    },
-    "./types": {
-      "require": {
-        "default": "./dist/types/index.cjs",
-        "types": "./dist/types/index.d.cts"
-      },
-      "import": {
-        "default": "./dist/types/index.mjs",
-        "types": "./dist/types/index.d.mts"
-      }
->>>>>>> 43b52f5caa7ea6f8e6d3d00bdf41f97bb278ab79
     }
   },
   "main": "./dist/index.umd.cjs",
