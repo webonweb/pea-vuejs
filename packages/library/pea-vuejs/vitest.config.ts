@@ -15,7 +15,7 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     exclude: ['**/node_modules/**'],
-    include: ['./**/*.test.{ts,js}'],
+    include: ['./**/*.spec.{ts,js}'],
     environmentOptions: {
       jsdom: {
         resources: 'usable',
