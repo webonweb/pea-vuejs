@@ -77,20 +77,20 @@
     "vue": ">= 3.2.0"
   },
   "devDependencies": {
-    "storybook": "8.0.9",
-    "@storybook/addon-docs": "8.0.9",
-    "@storybook/addon-essentials": "8.0.9",
-    "@storybook/addon-interactions": "8.0.9",
-    "@storybook/addon-links": "8.0.9",
-    "@storybook/blocks": "8.0.9",
-    "@storybook/core-common": "8.0.9",
-    "@storybook/csf-tools": "8.0.9",
+    "storybook": "^8.1.1",
+    "@storybook/addon-docs": "^8.1.1",
+    "@storybook/addon-essentials": "^8.1.1",
+    "@storybook/addon-interactions": "^8.1.1",
+    "@storybook/addon-links": "^8.1.1",
+    "@storybook/blocks": "^8.1.1",
+    "@storybook/core-common": "^8.1.1",
+    "@storybook/csf-tools": "^8.1.1",
     "@storybook/jest": "0.2.3",
-    "@storybook/node-logger": "8.0.9",
+    "@storybook/node-logger": "^8.1.1",
     "@storybook/test-runner": "0.17.0",
     "@storybook/testing-library": "0.2.2",
-    "@storybook/vue3": "8.0.9",
-    "@storybook/vue3-vite": "8.0.9",
+    "@storybook/vue3": "^8.1.1",
+    "@storybook/vue3-vite": "^8.1.1",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/user-event": "^14.5.1",
@@ -111,6 +111,8 @@
     "@pea-vuejs/primitive": "workspace:*",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "sass": "^1.77.1",
+    "tailwindcss": "^3.4.3",
+    "simple-code-editor": "^2.0.9"
   }
 }

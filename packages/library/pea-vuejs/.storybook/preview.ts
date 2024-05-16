@@ -1,5 +1,7 @@
 import { setup } from '@storybook/vue3'
+import '../src/assets/styles.scss'
 import { action } from '@storybook/addon-actions'
+
 
 setup((app) => {
   // Provide NuxtLink Stub

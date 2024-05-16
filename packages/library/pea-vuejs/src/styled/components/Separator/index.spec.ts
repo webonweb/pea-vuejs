@@ -10,6 +10,13 @@ describe('Separator Component', () => {
     expect(wrapper.findComponent({ name: 'Root' }).props('orientation')).toBe('horizontal');
   });
 
+  it('renders with default type as solid', () => {
+    const wrapper = mount(Separator);
+
+    expect(wrapper.props().type).toBe('solid');
+    expect(wrapper.findComponent({ name: 'Root' }).props('type')).toBe('solid');
+  });
+
   it('renders with vertical orientation when passed as a prop', () => {
     const wrapper = mount(Separator, {
       props: {
@@ -18,5 +25,15 @@ describe('Separator Component', () => {
     });
     expect(wrapper.props().orientation).toBe('vertical');
     expect(wrapper.findComponent({ name: 'Root' }).props('orientation')).toBe('vertical');
+  });
+
+  it('renders with dashed type when passed as a prop', () => {
+    const wrapper = mount(Separator, {
+      props: {
+        type: 'dashed'
+      }
+    });
+    expect(wrapper.props().type).toBe('dashed');
+    expect(wrapper.findComponent({ name: 'Root' }).props('type')).toBe('dashed');
   });
 });

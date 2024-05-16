@@ -5,6 +5,7 @@
 import type { PrimitiveProps } from "@pea-vuejs/primitive";
 export interface RootSepeartorProps extends PrimitiveProps {
   class?: string;
+  type?: "solid" | "dashed";
   orientation?: "horizontal" | "vertical";
 }
 </script>
@@ -15,12 +16,14 @@ import { Primitive } from "@pea-vuejs/primitive";
 
 const props = withDefaults(defineProps<RootSepeartorProps>(), {
   as: "div",
+  type: "solid",
   orientation: "horizontal",
 });
 
 const bindings = computed(() => {
   const bindings: Record<string, any> = {
     role: "separator",
+    "aria-type": props.type || "solid",
     "aria-orientation": props.orientation || "horizontal",
   };
 
