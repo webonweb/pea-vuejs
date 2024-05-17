@@ -1,6 +1,6 @@
 # Introduction
 
-The pea-vuejs library is an advanced tool designed for developers creating applications with Vue.js and Nuxt.js. The main features of this library are its support for accessibility and flexibility in styling. The library consists of two main types of components:
+The Pea VueJs library is an advanced tool designed for developers creating applications with Vue.js and Nuxt.js. The main features of this library are its support for accessibility and flexibility in styling. The library consists of two main types of components:
 
 ## Unstyled Components
 
@@ -22,12 +22,12 @@ These components not only support accessibility but also offer advanced styles u
   <li><b class="text-[#d5e47c]">Responsiveness: </b> Thanks to Tailwind CSS, the components are responsive and adapt to different screen sizes, which is crucial for today's web applications.</li>
 </ul>
 
-## Applications of Pea-VueJs
+## Applications of Pea VueJs
 
 <ul>
   <li><b class="text-[#d5e47c]">Creating Accessible Applications:  </b>With a focus on accessibility, the PEA-Vue.js library is ideal for projects that need to meet accessibility standards.</li>
   <li><b class="text-[#d5e47c]">Rapid Prototyping:   </b>  With ready-to-use components and Tailwind CSS support, developers can quickly create prototypes and test new ideas.</li>
-  <li><b class="text-[#d5e47c]">Consistency and Scalability:  </b> Using Pea-VueJS allows for maintaining a consistent look and feel across the application, which is important in large, scalable projects.</li>
+  <li><b class="text-[#d5e47c]">Consistency and Scalability:  </b> Using Pea VueJs allows for maintaining a consistent look and feel across the application, which is important in large, scalable projects.</li>
 </ul>
 
-In summary, Pea-VueJS is a versatile library offering tools for creating both accessible and aesthetic components in Vue.js and Nuxt.js. Its flexibility and support for the latest accessibility standards and modern styling make it an excellent choice for developers who care about the high quality and usability of their applications.
+In summary, Pea VueJs is a versatile library offering tools for creating both accessible and aesthetic components in Vue.js and Nuxt.js. Its flexibility and support for the latest accessibility standards and modern styling make it an excellent choice for developers who care about the high quality and usability of their applications.

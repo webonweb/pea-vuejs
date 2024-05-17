@@ -10,7 +10,7 @@ hero:
   tagline: Small UI library for non styled components.
   image:
     src: /images/logo-pea.webp
-    alt: Pea-VueJs
+    alt: Pea VueJs
   actions:
     - theme: brand
       text: Get Started
