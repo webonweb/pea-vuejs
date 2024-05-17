@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --output dist",
     "preview": "vitepress preview"
   },
   "postcss": {
