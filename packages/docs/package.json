@@ -5,11 +5,12 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
-    "vitepress": "^1.1.4"
+    "vitepress": "^1.1.4",
+    "simple-code-editor": "^2.0.9"
   },
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --output dist",
     "preview": "vitepress preview"
   },
   "postcss": {

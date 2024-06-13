@@ -12,10 +12,13 @@ export default defineConfig({
 
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/webonweb/pea-vuejs/edit/main/docs/content/:path',
+      pattern: 'https://github.com/webonweb/pea-vuejs/edit/main/packages/docs/content/:path',
       text: 'Suggest changes to this page',
     },
 
+    // search: {
+    //   provider: 'local'
+    // },
 
     logo: '/images/logo-pea.webp',
 
@@ -30,7 +33,15 @@ export default defineConfig({
       {
         text: 'Introduction',
         items: [
-          { text: 'What is Pea VueJs?', link: '/guide/introduction' },
+          {
+            text: 'What is Pea VueJs?', link: '/guide/introduction',
+            items: [
+              { text: 'Why should I use ?', link: '/guide/introduction/why-should-i-use' },
+              { text: 'Why Pea ?', link: '/guide/introduction/why-pea' },
+              { text: 'Comparison', link: '/guide/introduction/comparison-with-other-libraries' },
+              { text: 'Two modules', link: '/guide/introduction/two-modules-one-library' }
+            ]
+          },
           { text: 'Getting Started', link: '/guide/getting-started' },
           { text: 'Release', link: '/guide/releases' }
         ]
