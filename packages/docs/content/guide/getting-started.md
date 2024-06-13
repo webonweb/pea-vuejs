@@ -54,6 +54,14 @@ bun install pea-vuejs
 
 ## Usage
 
+## Nuxt
+
+```typescript
+  modules: [
+    '@pea-vuejs/nuxt'
+  ],
+```
+
 ### Unstyled Components
 
 ```vue

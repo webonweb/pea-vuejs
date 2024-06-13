@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appDir: '/src',
   modules: [
-    'nuxt-primevue'
+    '@pea-vuejs/nuxt'
   ],
   postcss: {
     plugins: {
@@ -11,5 +11,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ['primevue/resources/themes/aura-light-green/theme.css']
 })
