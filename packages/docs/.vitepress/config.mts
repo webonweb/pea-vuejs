@@ -12,10 +12,13 @@ export default defineConfig({
 
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/webonweb/pea-vuejs/edit/main/docs/content/:path',
+      pattern: 'https://github.com/webonweb/pea-vuejs/edit/main/packages/docs/content/:path',
       text: 'Suggest changes to this page',
     },
 
+    // search: {
+    //   provider: 'local'
+    // },
 
     logo: '/images/logo-pea.webp',
 
