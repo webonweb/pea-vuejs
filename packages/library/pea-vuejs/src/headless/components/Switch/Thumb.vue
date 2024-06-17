@@ -3,28 +3,23 @@
 </template>
 <script lang="ts">
 import type { PrimitiveProps } from "@pea-vuejs/primitive";
-export interface RootSepeartorProps extends PrimitiveProps {
+
+export interface ThumbSwitchProps extends PrimitiveProps {
   class?: string;
-  type?: "solid" | "dashed";
-  orientation?: "horizontal" | "vertical";
 }
 </script>
 
 <script lang="ts" setup>
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 import { Primitive } from "@pea-vuejs/primitive";
 
-const props = withDefaults(defineProps<RootSepeartorProps>(), {
-  as: "div",
-  type: "solid",
-  orientation: "horizontal",
+const props = withDefaults(defineProps<ThumbSwitchProps>(), {
+  as: "span",
 });
 
 const bindings = computed(() => {
   const bindings: Record<string, any> = {
-    role: "separator",
-    "aria-type": props.type || "solid",
-    "aria-orientation": props.orientation || "horizontal",
+    "aria-hidden": true,
   };
 
   if (props.class) {
