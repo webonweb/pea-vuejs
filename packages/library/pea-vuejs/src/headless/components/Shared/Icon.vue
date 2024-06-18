@@ -17,7 +17,7 @@ const props = defineProps<IconAccordionProps>();
 const icon = computed(() => {
   const name = props.name;
   return defineAsyncComponent(
-    () => import(`../../assets/icons/${name}.svg?component`)
+    () => import(`../../../assets/icons/${name}.svg?component`)
   );
 });
 

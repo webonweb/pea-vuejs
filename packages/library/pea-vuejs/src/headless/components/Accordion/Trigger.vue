@@ -74,6 +74,6 @@ const handleClick = () => {
 
 <style lang="scss" scoped>
 summary {
-  list-style-type: none;
+  list-style: none;
 }
 </style>

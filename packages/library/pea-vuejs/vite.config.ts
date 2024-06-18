@@ -27,7 +27,7 @@ export default defineConfig({
       },
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
-        headless: resolve(__dirname, 'src/headless.ts')
+        headless: resolve(__dirname, 'src/headless.ts'),
       },
     },
     rollupOptions: {
