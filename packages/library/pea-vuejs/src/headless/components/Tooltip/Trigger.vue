@@ -41,6 +41,6 @@ const bindings = computed(() => {
 const options = inject<ProvideTooltip>("options");
 
 const toogleState = (state: boolean) => {
-  options.visible.value = state;
+  options!.visible.value = state;
 };
 </script>

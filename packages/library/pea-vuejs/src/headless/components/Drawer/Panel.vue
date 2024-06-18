@@ -39,7 +39,7 @@ const bindings = computed(() => {
   return bindings;
 });
 
-const onAfterLeave = () => (options.open.value = false);
+const onAfterLeave = () => (options!.open.value = false);
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@
     :as="as"
     :as-child="asChild"
     v-bind="bindings"
-    @click.prevent="options?.open.value = !options?.open.value"
+    @click.prevent="options!.open.value = !options?.open.value"
   >
     <slot />
   </Primitive>

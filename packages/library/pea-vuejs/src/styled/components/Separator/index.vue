@@ -1,5 +1,5 @@
 <template>
-  <Separator.Root :orientation :class="schemeClasses" />
+  <Separator.Root :orientation="orientation" :class="schemeClasses" />
 </template>
 
 <script lang="ts" setup>

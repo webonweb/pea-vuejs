@@ -55,7 +55,7 @@ const onAfterEnter = () => {
   if (props.static && !visible.value) {
     return;
   }
-  let time: Timer | null = null;
+  let time: ReturnType<typeof setTimeout> | null = null;
   time = setTimeout(() => {
     visible.value = false;
     // @ts-ignore

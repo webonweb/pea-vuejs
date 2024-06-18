@@ -13,7 +13,7 @@ export interface RootSwitchProps extends PrimitiveProps {
 </script>
 
 <script lang="ts" setup>
-import { computed, provide, type ModelRef, watch } from "vue";
+import { computed, provide, type ModelRef } from "vue";
 import { Primitive } from "@pea-vuejs/primitive";
 
 const props = withDefaults(defineProps<RootSwitchProps>(), {

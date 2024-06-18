@@ -1,10 +1,10 @@
 <template>
   <Primitive
-    v-if="options.text.length >= options.max"
+    v-if="options!.text.length >= options!.max"
     :as="as"
     :as-child="asChild"
     v-bind="bindings"
-    @click.prevent="options.visible.value = !options.visible.value"
+    @click.prevent="handleToogle"
   >
     <slot />
   </Primitive>
@@ -42,4 +42,9 @@ const bindings = computed(() => {
 
   return bindings;
 });
+
+const handleToogle = () => {
+  if (options && options.visible)
+    options.visible.value = !options.visible.value;
+};
 </script>

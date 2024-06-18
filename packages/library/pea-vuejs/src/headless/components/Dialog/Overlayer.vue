@@ -9,7 +9,9 @@
       :as="as"
       :as-child="asChild"
       v-bind="bindings"
-      @click.prevent="!options?.static ? (options.visible.value = false) : null"
+      @click.prevent="
+        !options?.static ? (options!.visible.value = false) : null
+      "
     >
       <slot />
     </Primitive>
@@ -46,9 +48,9 @@ const bindings = computed(() => {
   return bindings;
 });
 
-const onAfterEnter = () => (options.visible.value = true);
+const onAfterEnter = () => (options!.visible.value = true);
 
-const onAfterLeave = () => (options.open.value = false);
+const onAfterLeave = () => (options!.open.value = false);
 </script>
 
 <style lang="scss" scoped>

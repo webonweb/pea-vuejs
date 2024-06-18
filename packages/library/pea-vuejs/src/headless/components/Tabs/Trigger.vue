@@ -51,11 +51,13 @@ const handleClick = () => {
     return;
   }
 
-  if (options?.isolate) {
-    options.active.value = props.id;
-  } else {
-    options.active.value = undefined;
-    options.next.value = props.id;
+  if (options && options.active && options.next) {
+    if (options && options?.isolate) {
+      options.active.value = props.id;
+    } else {
+      options.active.value = undefined;
+      options.next.value = props.id;
+    }
   }
 };
 </script>

@@ -44,9 +44,9 @@ const bindings = computed(() => {
   return bindings;
 });
 
-const onAfterEnter = () => (options.visible.value = true);
+const onAfterEnter = () => (options!.visible.value = true);
 
-const onAfterLeave = () => (options.open.value = false);
+const onAfterLeave = () => (options!.open.value = false);
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,10 @@
     :as="as"
     v-bind="bindings"
     :as-child="asChild"
-    @input="(event: InputEvent) => emit('on:change', event.target?.value)"
+    @input="
+      (event: InputEvent) =>
+        emit('on:change', (event.target as HTMLInputElement)?.value)
+    "
   />
 </template>
 <script lang="ts">

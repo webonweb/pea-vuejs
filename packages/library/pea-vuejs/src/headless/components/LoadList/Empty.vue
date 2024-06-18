@@ -3,10 +3,17 @@
     <slot />
   </Primitive>
 </template>
+
+<script lang="ts">
+import type { PrimitiveProps } from "@pea-vuejs/primitive";
+export interface EmptyLoadListProps extends PrimitiveProps {}
+</script>
+
 <script lang="ts" setup>
 import { inject } from "vue";
 import type { ProvideLoadList } from "./types";
 import { Primitive } from "@pea-vuejs/primitive";
 
 const options: ProvideLoadList | undefined = inject<ProvideLoadList>("options");
+defineProps<EmptyLoadListProps>();
 </script>

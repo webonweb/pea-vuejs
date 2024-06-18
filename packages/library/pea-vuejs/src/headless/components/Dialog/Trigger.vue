@@ -3,7 +3,7 @@
     :as="as"
     :as-child="asChild"
     v-bind="bindings"
-    @click.prevent="options.visible.value = false"
+    @click.prevent="options!.visible.value = false"
   >
     <slot />
   </Primitive>

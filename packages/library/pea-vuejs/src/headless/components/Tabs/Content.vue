@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade-in" @after-leave="onAfterLeave">
     <Primitive
-      v-if="options?.active.value === props.id"
+      v-if="options?.active!.value === props.id"
       :as="as"
       :as-child="asChild"
       v-bind="bindings"
@@ -20,8 +20,8 @@ export interface ContentTabsProps extends PrimitiveProps {
 
 <script lang="ts" setup>
 import { computed, inject } from "vue";
+import type { ProvideTabs } from "./types";
 import { Primitive } from "@pea-vuejs/primitive";
-import type { ProvideTabs } from "@pea-vuejs/types/src/components/tabs";
 
 const props = withDefaults(defineProps<ContentTabsProps>(), {
   as: "div",
@@ -40,7 +40,7 @@ const bindings = computed(() => {
     bindings.class = props.class;
   }
 
-  if (options.active.value !== props.id) {
+  if (options?.active!.value !== props.id) {
     bindings.hidden = true;
   }
 
@@ -48,7 +48,7 @@ const bindings = computed(() => {
 });
 
 const onAfterLeave = () => {
-  options.active.value = options?.next?.value;
+  if (options) options.active!.value = options?.next?.value;
 };
 </script>
 
