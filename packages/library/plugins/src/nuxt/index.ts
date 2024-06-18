@@ -7,7 +7,7 @@ export interface ModuleOptions { }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@pea-vuejs/nuxt',
+    name: 'pea-vuejs/nuxt',
     configKey: 'pea-vuejs',
     compatibility: {
       nuxt: '^3.0.0',

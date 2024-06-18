@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build --filter=!vue --filter=!nuxt --filter=!@docs/pea-vuejs --filter=!@playground/vue --filter=!@playground/nuxt",
+    "build": "turbo run build --filter=!@playground/nuxt --filter=!@docs/pea-vuejs --filter=!@playground/vue --filter=!@playground/nuxt --filter=pea-vuejs --filter=@pea-vuejs/plugins",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "docs:dev": "cd ./packages/docs && bun run dev",

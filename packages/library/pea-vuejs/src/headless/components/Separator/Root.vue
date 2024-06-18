@@ -1,5 +1,5 @@
 <template>
-  <Primitive :as :as-child="asChild" v-bind="bindings" />
+  <Primitive :as="as" :as-child="asChild" v-bind="bindings" />
 </template>
 <script lang="ts">
 import type { PrimitiveProps } from "@pea-vuejs/primitive";

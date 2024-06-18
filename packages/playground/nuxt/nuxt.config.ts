@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appDir: '/src',
   modules: [
-    '@pea-vuejs/nuxt'
+    'pea-vuejs/nuxt'
   ],
   postcss: {
     plugins: {

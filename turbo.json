@@ -1,9 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
+  "tasks": {
+    "pea-vuejs#build": {
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "@pea-vuejs/plugins#build": {
+      "dependsOn": ["pea-vuejs#build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
