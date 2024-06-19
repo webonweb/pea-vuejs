@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar.vue > matches the snapshot 1`] = `
+"<figure class="overflow-hidden border border-pea-surface-black/5 w-12 h-12 rounded-full"><img loading="lazy" draggable="false" decoding="async" fetchpriority="auto" src="/src/assets/images/empty-avatar.webp" alt="User Avatar Alt" title="User Avatar" class="w-12 h-12 rounded-full">
+  <figcaption>User Avatar</figcaption>
+</figure>"
+`;

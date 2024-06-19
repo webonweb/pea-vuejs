@@ -117,6 +117,9 @@ const orientation = ref('horizontal')
                 ${item.default}
               </td>
               <td class="px-6 py-4">
+                ${item.type}
+              </td>
+              <td class="px-6 py-4">
                 ${item.description}
               </td>
               <td class="px-6 py-4">
@@ -187,6 +190,9 @@ const orientation = ref('horizontal')
                 </th>
                 <th scope="col" class="px-6 py-3">
                   Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Description
                 </th>
                 <th scope="col" class="px-6 py-3">
                   Required

@@ -22,7 +22,7 @@ import { computed, ref } from "vue";
 import { Primitive } from "@pea-vuejs/primitive";
 
 const props = withDefaults(defineProps<RootImageProps>(), {
-  as: "image",
+  as: "img",
 });
 
 const src = ref<string | null | undefined>(props.image.placeholder);
