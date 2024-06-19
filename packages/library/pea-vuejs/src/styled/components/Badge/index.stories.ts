@@ -2,59 +2,53 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 import { ref, watch } from 'vue';
 import hljs from 'highlight.js';
-import AvatarComponent from './index.vue'
+import BadgeComponent from './index.vue'
 import CodeEditor from 'simple-code-editor';
 
 
-const meta: Meta<typeof AvatarComponent> = {
-  title: 'Avatar',
-  component: AvatarComponent,
+const meta: Meta<typeof BadgeComponent> = {
+  title: 'Badge',
+  component: BadgeComponent,
   tags: ['autodocs'],
   argTypes: {
-    size: { description: 'Parameter to set the size', options: ["small", "medium", "large"] },
-    type: { description: 'Parameter to set the type', options: ["square", "circle"] },
-    image: { description: 'Parameter to set image', control: "object" },
+    id: { description: 'Parameter to set the id', type: 'string' },
+    type: { description: 'Parameter to set the type', options: ["default", "success", "error", "info", "warning"] },
+    value: { description: 'Parameter to set the value', type: 'string' },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof AvatarComponent>;
+type Story = StoryObj<typeof BadgeComponent>;
 
-export const Avatar: Story = {
+export const Badge: Story = {
   render: (args) => ({
-    components: { AvatarComponent, CodeEditor },
+    components: { BadgeComponent, CodeEditor },
     setup() {
       const apiReference = ref()
       const codeEditorRef = ref()
       const propsCode: Record<string, Record<string, string | boolean>[]> = {
         typescript: [
           {
-            name: 'size',
-            default: 'medium',
+            name: 'id',
+            default: '---',
             type: 'string',
-            description: 'Parameter to set the size',
-            required: false,
+            description: 'Parameter to set the id',
+            required: true,
           },
           {
             name: 'type',
-            default: 'circle',
-            type: '"square", "circle"',
+            default: 'default',
+            type: '"default", "success", "error", "info", "warning"]',
             description: 'Parameter to set the type',
             required: false,
           },
           {
-            name: 'image',
-            default: `
-            {
-              src?: string | null
-              alt: string
-              title?: string
-            }
-            `,
-            type: 'AvatarOption',
-            description: 'Parameter to set image',
-            required: true,
+            name: 'value',
+            default: `---`,
+            type: 'string',
+            description: 'Parameter to set the value',
+            required: false,
           }
         ],
         javascript: [],
@@ -62,46 +56,39 @@ export const Avatar: Story = {
 
       const codeMap: Record<string, string> = {
         typescript: `<template>
-  <Avatar :type :size :image />
+  <Badge :type :id :value>
+    Lorm ipsum
+  </Badge>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Avatar } from "pea-vuejs"
+import { Badge } from "pea-vuejs"
 
-const size = ref('medium')
-const type = ref('circle')
+const id = ref('badge-note')
+const type = ref('default')
 
-const image = ref({
-  src: ''
-  alt: 'Lorem ipsum
-  title: 'Lorem ipsum'
-})
-
+const value = ref('45')
 </script>`,
         javascript: `<template>
-  <Avatar.Root>
-    <Shared.Image
-      :image="{
-        ...image,
-        placeholder: 'Url to placeolder image',
-      }"
-    />
-    <Avatar.Caption>
-      {{ image?.title || image?.alt }}
-    </Avatar.Caption>
-  </Avatar.Root>
+  <Badge.Root :id="id">
+    Lorem ipsum
+    <Shared.Sup
+      :for="id"
+      role="status"
+      :aria-live="true"
+    >
+      {{ value }}
+    </Shared.Sup>
+  </Badge.Root>
 </template>
   
 <script lang="ts" setup>
 import { ref } from "vue" 
-import { Avatar, Shared } from "pea-vuejs/headless";
+import { Badge, Shared } from "pea-vuejs/headless";
 
-const image = ref({
-  src: ''
-  alt: 'Lorem ipsum
-  title: 'Lorem ipsum'
-})
+const id = ref('badge-note')
+const value = ref('45')
 </script>`
       }
 
@@ -146,7 +133,7 @@ const image = ref({
       }
 
 
-      watch(() => [args.type, args.size, code.value], () => {
+      watch(() => [args.type, args.value, args.id, code.value], () => {
         codeEditorRef.value.$refs.code.removeAttribute('data-highlighted');
       })
 
@@ -163,16 +150,16 @@ const image = ref({
       };
     },
     template: `
-        <div class="w-[800px] pb-10 overflow-visible">
+       <div class="w-[800px] pb-10 overflow-visible">
       <div class="grid grid-rows-[repeat(2,max-content)] gap-y-4">
-        <h3 class="text-5xl font-bold">Avatar</h3>
-        <p class="text-base text-black/60">The Avatar component in software is used to represent a user through an image, icon, or initials, facilitating identification in user interfaces such as social media applications, user management systems, or messaging platforms. The Avatar often includes customization options, allowing users to change the appearance and tailor the representation to their preferences.</p>
+        <h3 class="text-5xl font-bold">Badge</h3>
+        <p class="text-base text-black/60">The Badge component in software is a small, often rounded graphical element used to display a number or short text, typically to indicate new messages, notifications, or status. The Badge is often placed on icons, buttons, or avatars to draw the user's attention to important information.</p>
       </div>
       <br/>
       <div class="grid grid-rows-[repeat(2,max-content)] gap-y-4">
         <strong class="text-2xl font-bold"># Example of component usage:</strong>
         <div class="p-8 h-40 bg-black/5 rounded-t-lg border border-black/5 relative flex items-center justify-center">
-          <AvatarComponent :image="{ alt: 'Lorem ipsum', title:'title' }" :size="args.size" :type="args.type"/>
+            <BadgeComponent :type="args.type" v-model:value="args.value" :id="args.id">Lorem ipsum</BadgeComponent>
         </div>
         <CodeEditor ref="codeEditorRef" v-model="code" :read-only="true" :languages="[['typescript', 'Styled'], ['javascript', 'Headless']]" class="!w-[800px] relative -top-[30px]" theme="base16-bespin" @lang="handleChangeLang"/>
       </div>
@@ -221,17 +208,15 @@ const image = ref({
       <div class="grid grid-rows-[repeat(2,max-content)] gap-y-4">
         <div>
           <strong class="text-2xl mb-3 font-bold block"># Accessibility:</strong>
-          <p class="text-base text-black/60">Accessibility for the Avatar component ensures that users with disabilities can interact with and understand the avatar representation through alternative text descriptions and keyboard navigation. This includes providing meaningful alt text for images, ensuring avatars are focusable, and integrating with screen readers to convey necessary information about the user's identity.</p>
-        </div>
-        <div>
-          For more info go to -> <a class=" text-blue-600" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role" target="__blank">avatar</a> 
+          <p class="text-base text-black/60">Accessibility for the Badge component ensures that all users, including those with disabilities, can perceive and understand the badge's content through screen readers and other assistive technologies. This includes providing appropriate ARIA attributes and ensuring that the badge's information is conveyed in a meaningful way to users who rely on these tools.</p>
         </div>
       </div>
     </div>
   `,
   }),
   args: {
-    type: 'square',
-    size: 'medium',
+    id: 'badge-alert',
+    type: 'default',
+    value: '45'
   },
 };
