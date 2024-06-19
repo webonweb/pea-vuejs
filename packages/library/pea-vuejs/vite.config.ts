@@ -17,6 +17,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(projectRootDir, 'src'),
+      '@/headless': resolve(projectRootDir, 'src/headless'),
+      '@/assets': resolve(projectRootDir, 'src/assets/*')
     },
   },
   build: {
