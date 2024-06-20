@@ -2,6 +2,8 @@ import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import GlobPlugin from "vite-plugin-glob";
+import svgLoader from "vite-svg-loader";
 
 const projectRootDir = resolve(__dirname)
 
@@ -13,6 +15,12 @@ export default defineConfig({
       cleanVueFileName: true,
       exclude: ['src/test/**', 'src/**/story/**', 'src/**/*.story.vue'],
     }),
+    svgLoader({
+      defaultImport: "url",
+    }),
+    GlobPlugin({
+      restoreQueryExtension: true
+    })
   ],
   resolve: {
     alias: {

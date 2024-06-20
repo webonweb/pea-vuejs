@@ -11,6 +11,7 @@ export interface RootButtonProps extends PrimitiveProps {
   class?: string;
   title?: string;
   ariaLabel?: string;
+  disabled?: boolean;
 }
 </script>
 
@@ -28,21 +29,23 @@ const bindings = computed(() => {
       ? "button"
       : props.to?.includes("http")
         ? "a"
-        : resolveComponent("NuxtLink"),
+        : resolveComponent("NuxtLink") || resolveComponent("RouterLink"),
     type: props.type || "button",
     "aria-label": props.ariaLabel || undefined,
+    "aria-disabled": props.disabled || undefined,
     title: props.title || props.ariaLabel || undefined,
+    disabled: props.disabled,
   };
 
   if (props.class) {
     bindings.class = props.class;
   }
 
-  if (bindings.as === "a") {
+  if (bindings.as === "a" && !bindings.disabled) {
     bindings.href = props.to || undefined;
   }
 
-  if (bindings.as !== "a" && bindings.as !== "button") {
+  if (bindings.as !== "a" && bindings.as !== "button" && !bindings.disabled) {
     bindings.to = props.to || undefined;
   }
 

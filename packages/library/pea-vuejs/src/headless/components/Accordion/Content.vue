@@ -27,7 +27,7 @@ import { inject, computed } from "vue";
 import type { ProvideAccordion } from "./types";
 import { Primitive } from "@pea-vuejs/primitive";
 
-withDefaults(defineProps<BaseAccordionProps>(), {
+const props = withDefaults(defineProps<BaseAccordionProps>(), {
   as: "div",
 });
 
@@ -38,6 +38,10 @@ const bindings = computed(() => {
   const bindings: Record<string, any> = {
     id: inject<string>("uniqueId"),
   };
+
+  if (props.class) {
+    bindings.class = props.class;
+  }
 
   return bindings;
 });

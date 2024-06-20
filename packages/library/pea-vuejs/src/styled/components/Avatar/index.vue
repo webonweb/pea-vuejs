@@ -20,7 +20,7 @@
 import { computed } from "vue";
 import { Avatar, Shared } from "@/headless";
 import type { AvatarOption } from "./types";
-import EmptyAvatar from "@/assets/images/images/empty-avatar.webp";
+import EmptyAvatar from "@/assets/images/empty-avatar.webp";
 
 const props = withDefaults(
   defineProps<{
