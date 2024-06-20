@@ -11,15 +11,20 @@ export interface ContentCardProps extends PrimitiveProps {
 </script>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, inject } from "vue";
+import type { ProvideCard } from "./types";
 import { Primitive } from "@pea-vuejs/primitive";
 
 const props = withDefaults(defineProps<ContentCardProps>(), {
   as: "div",
 });
 
+const options = inject<ProvideCard>("options");
+
 const bindings = computed(() => {
-  const bindings: Record<string, any> = {};
+  const bindings: Record<string, any> = {
+    id: `card-content-${options?.id}`,
+  };
 
   if (props.class) {
     bindings.class = props.class;
