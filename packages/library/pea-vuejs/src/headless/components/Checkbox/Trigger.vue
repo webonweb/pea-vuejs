@@ -4,6 +4,7 @@
     :as-child="asChild"
     v-bind="bindings"
     @click.prevent="disabled ? null : (checked = !checked)"
+    @keyup.enter="disabled ? null : (checked = !checked)"
   >
     <slot />
   </Primitive>
@@ -29,7 +30,9 @@ const props = withDefaults(defineProps<TriggerCheckboxProps>(), {
 const checked = inject<ModelRef<boolean>>("checked");
 
 const bindings = computed(() => {
-  const bindings: Record<string, any> = {};
+  const bindings: Record<string, any> = {
+    tabindex: "0",
+  };
 
   if (props.class) {
     bindings.class = props.class;

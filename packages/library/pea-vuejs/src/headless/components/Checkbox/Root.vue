@@ -40,7 +40,6 @@ const bindings = computed(() => {
     id: props.id,
     role: "checkbox",
     "aria-checked": checked.value,
-    tabindex: "0",
     "aria-invalid": props.invalid.toString(),
     disabled: props.disabled,
     "data-disabled": props.disabled,

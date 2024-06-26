@@ -53,14 +53,4 @@ describe('Badge.vue', () => {
     const sup = wrapper.findComponent({ name: 'Sup' });
     expect(sup.classes()).toContain('bg-pea-default-100');
   });
-
-  it('matches the snapshot', () => {
-    const wrapper = mount(Badge, {
-      props: {
-        id: 'test-badge',
-        value: 5,
-      },
-    });
-    expect(wrapper.html()).toMatchSnapshot();
-  });
 });

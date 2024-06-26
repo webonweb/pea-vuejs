@@ -2,134 +2,67 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 import { ref, watch } from 'vue';
 import hljs from 'highlight.js';
-import CheckboxComponent from './index.vue'
+import CollapseComponent from './index.vue'
 import CodeEditor from 'simple-code-editor';
 
-const meta: Meta<typeof CheckboxComponent> = {
-  title: 'Checkbox',
-  component: CheckboxComponent,
+const meta: Meta<typeof CollapseComponent> = {
+  title: 'Collapse',
+  component: CollapseComponent,
   tags: ['autodocs'],
   argTypes: {
-    name: { description: 'Parameter to set name checkbox', type: 'string' },
-    id: { description: 'Parameter to set id checkbox', type: 'string' },
-    errorMessage: { description: 'Parameter to set errorMessage checkbox', type: 'string' },
-    type: { description: 'Parameter to set the checkbox type', options: ["default", "success", "error", "info", "warning", "primary", "secondary"] },
-    size: { description: 'Parameter to set the checkbox size', options: ["small", "medium", "large"] },
-    disabled: { description: 'Parameter to set disabled checkbox', type: 'boolean' },
-    required: { description: 'Parameter to set required checkbox', type: 'boolean' },
+    id: { description: 'Parameter to set id collapse', type: 'string' },
+    disabled: { description: 'Parameter to set disabled collapse', type: 'boolean' },
+    open: { description: 'Parameter to set v-model collapse', type: 'boolean' }
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof CheckboxComponent>;
+type Story = StoryObj<typeof CollapseComponent>;
 
-export const Checkbox: Story = {
+export const Collapse: Story = {
   render: (args) => ({
-    components: { CheckboxComponent, CodeEditor },
+    components: { CollapseComponent, CodeEditor },
     setup() {
       const apiReference = ref()
       const codeEditorRef = ref()
       const propsCode: Record<string, Record<string, string | boolean>[]> = {
         typescript: [
           {
-            name: 'name',
-            default: '---',
-            type: 'string',
-            description: 'Parameter to set name checkbox',
-            required: true,
-          },
-          {
             name: 'id',
             default: '---',
             type: 'string',
-            description: 'Parameter to set id checkbox',
+            description: 'Parameter to set id collapse',
             required: true,
-          },
-          {
-            name: 'errorMessage',
-            default: '---',
-            type: 'string',
-            description: 'Parameter to set errorMessage checkbox',
-            required: false,
-          },
-          {
-            name: 'type',
-            default: 'primary',
-            type: '"default", "success", "error", "info", "warning", "primary", "secondary"',
-            description: 'Parameter to set the checkbox type',
-            required: false,
-          },
-          {
-            name: 'size',
-            default: 'medium',
-            type: '"small", "medium", "large"',
-            description: 'Parameter to set the checkbox size',
-            required: false,
           },
           {
             name: 'disabled',
             default: 'false',
             type: 'boolean',
-            description: 'Parameter to set disabled checkbox',
+            description: 'Parameter to set disabled collapse',
             required: false,
           },
           {
-            name: 'required',
-            default: 'false',
-            type: 'boolean',
-            description: 'Parameter to set required checkbox',
-            required: false,
-          },
-          {
-            name: 'value',
+            name: 'open',
             default: '---',
             type: 'boolean',
-            description: 'Parameter to set v-model checkbox',
+            description: 'Parameter to set v-model collapse',
             required: true,
           },
         ],
         javascript: [
           {
-            name: 'name',
-            default: '---',
-            type: 'string',
-            description: 'Parameter to set name checkbox',
-            required: true,
-          },
-          {
             name: 'id',
             default: '---',
             type: 'string',
-            description: 'Parameter to set id checkbox',
+            description: 'Parameter to set id collapse',
             required: true,
           },
           {
-            name: 'describe',
-            default: '---',
-            type: 'string',
-            description: 'Parameter to set describe checkbox',
-            required: false,
-          },
-          {
-            name: 'disabled',
-            default: 'false',
-            type: 'boolean',
-            description: 'Parameter to set disabled checkbox',
-            required: false,
-          },
-          {
-            name: 'required',
-            default: 'false',
-            type: 'boolean',
-            description: 'Parameter to set required checkbox',
-            required: false,
-          },
-          {
-            name: 'checked',
+            name: 'open',
             default: '---',
             type: 'boolean',
-            description: 'Parameter to set v-model checkbox',
+            description: 'Parameter to set v-model collapse',
             required: true,
           },
         ],
@@ -137,56 +70,40 @@ export const Checkbox: Story = {
 
       const codeMap: Record<string, string> = {
         typescript: `<template>
- <Checkbox :id :name :type :disabled :size :error-message="errorMessage" :required v-model:value="checked">
-    <template #description>
-        Lorem ipsum descirption
+ <Collapse :id :disabled v-model:open="open" >
+    <template #heading>
+        Lorem ipsum
     </template>
     Lorem ipsum content
- </Checkbox>
+ </Collapse>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Checkbox } from "pea-vuejs"
+import { Collapse } from "pea-vuejs"
 
-const id = ref('example-checkbox')
-const name = ref('example-checkbox')
-const size = ref('medium')
-const type = ref('primary')
+const id = ref('example-collapse')
 const disabled = ref(false)
-const required = ref(false)
-const checked = ref(false)
-const errorMessage = ref('Error lorem ipsum')
+const open = ref(false)
 </script>`,
         javascript: `<template>
-  <Checkbox.Root
-    :id="id"
-    :name="name"
-    :required="required"
-    :disabled="disabled"
-    describe="Lorem ipsum"
-    v-model:checked="modelValue"
-    :invalid="true"
-  >
-    <Checkbox.Trigger>
-      <Shared.Icon
-        v-if="modelValue"
-        name="checked"
-      />
-    </Checkbox.Trigger>
-  </Checkbox.Root>
+  <Collapse.Root :id="id" v-model:open="open">
+    <Collapse.Trigger>
+      <slot name="heading" />
+      <Shared.Icon name="arrow-down" />
+    </Collapse.Trigger>
+    <Collapse.Content>
+      <slot />
+    </Collapse.Content>
+  </Collapse.Root>
 </template>
   
 <script lang="ts" setup>
 import { ref } from "vue" 
-import { Checkbox, Shared } from "pea-vuejs/headless";
+import { Collapse, Shared } from "pea-vuejs/headless";
 
-const id = ref('example-checkbox')
-const name = ref('example-checkbox')
-const disabled = ref(false)
-const required = ref(false)
-
-const modelValue = ref(false)
+const id = ref('example-collapse')
+const open = ref(false)
 </script>`
       }
 
@@ -231,10 +148,9 @@ const modelValue = ref(false)
       }
 
 
-      watch(() => [args.type, args.size, args.disabled, args.id, args.name, code.value], () => {
+      watch(() => [args.disabled, args.id, args.open, code.value], () => {
         codeEditorRef.value.$refs.code.removeAttribute('data-highlighted');
       })
-
 
       return {
         args,
@@ -249,20 +165,20 @@ const modelValue = ref(false)
     template: `
         <div class="w-[800px] pb-10 overflow-visible">
       <div class="grid grid-rows-[repeat(2,max-content)] gap-y-4">
-        <h3 class="text-5xl font-bold">Checkbox</h3>
-        <p class="text-base text-black/60">A Checkbox is an interactive user interface component that allows for the selection of one or more options from a set. It can be used to enable or disable features, and its state (checked or unchecked) is visible to the user.</p>
+        <h3 class="text-5xl font-bold">Collapse</h3>
+        <p class="text-base text-black/60">
+The Collapse component is a user interface element that allows hiding and expanding content in response to user actions. It is often used to save screen space and improve clarity by presenting information on demand.</p>
       </div>
       <br/>
       <div class="grid grid-rows-[repeat(2,max-content)] gap-y-4">
         <strong class="text-2xl font-bold"># Example of component usage:</strong>
         <div class="p-8 h-40 bg-black/5 rounded-t-lg border border-black/5 relative flex items-center justify-center">
-          
-    <CheckboxComponent :name="args.name" :id="args.id" :error-message="args.errorMessage" :type="args.type" :size="args.size" :disabled="args.disabled" :required="args.required">
-      <template #description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue mollis ligula in efficitur. Cras consectetur erat ut felis iaculis,
-      </template>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue mollis ligula in efficitur. Cras consectetur erat ut felis iaculis, a bibendum elit laoreet. Mauris vel viverra lacus, non dapibus nibh.
-    </CheckboxComponent>
+        <CollapseComponent :open="args.open" :id="args.id" :disabled="args.disabled">
+        <template #heading>
+          Lorem ipsum dolor sit amet,
+        </template>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sollicitudin quam id dictum. Maecenas enim quam, facilisis id risus ut, eleifend congue neque. Nullam aliquet sit amet velit ac ornare. 
+      </CollapseComponent>
         </div>
         <CodeEditor ref="codeEditorRef" v-model="code" :read-only="true" :languages="[['typescript', 'Styled'], ['javascript', 'Headless']]" class="!w-[800px] relative -top-[30px]" theme="base16-bespin" @lang="handleChangeLang"/>
       </div>
@@ -312,19 +228,15 @@ const modelValue = ref(false)
         <div>
           <strong class="text-2xl mb-3 font-bold block"># Accessibility:</strong>
           <p class="text-base text-black/60">
-Adjusting a component for Accessibility involves ensuring it is accessible and easy to use for people with various disabilities. It is important that every component, such as a checkbox, is compatible with assistive technologies like screen readers and meets WCAG standards.</p>
+Adjusting the collapse component for Accessibility involves ensuring it is accessible to people with various disabilities. It is important that this component is compatible with assistive technologies like screen readers and that users can control it using a keyboard.</p>
         </div>
       </div>
     </div>
 `,
   }),
   args: {
-    name: 'checkbox-example',
-    id: 'checkbox-example',
-    errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    type: 'primary',
-    size: 'medium',
+    id: 'collapse-example',
     disabled: false,
-    required: false,
+    open: false
   },
 };
