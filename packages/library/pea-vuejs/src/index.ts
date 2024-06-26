@@ -4,6 +4,9 @@
 export * from './styled/components/Separator/index.vue';
 export * from './styled/components/Alert/index.vue'
 export * from './styled/components/Avatar/index.vue'
+export * from './styled/components/Badge/index.vue'
+export * from './styled/components/Button/index.vue'
+export * from './styled/components/Card/index.vue'
 
 /* ----------------------------------------- */
 /* -- Theme --

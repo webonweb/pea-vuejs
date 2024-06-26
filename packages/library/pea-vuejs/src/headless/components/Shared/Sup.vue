@@ -7,7 +7,7 @@
 import type { PrimitiveProps } from "@pea-vuejs/primitive";
 export interface SharedSupProps extends PrimitiveProps {
   class?: string;
-  for: string;
+  for?: string;
   role?: string;
   ariaLive?: boolean;
 }
@@ -22,7 +22,9 @@ const props = withDefaults(defineProps<SharedSupProps>(), {
 });
 
 const bindings = computed(() => {
-  const bindings: Record<string, any> = {};
+  const bindings: Record<string, any> = {
+    for: props.for || undefined,
+  };
 
   if (props.class) {
     bindings.class = props.class;

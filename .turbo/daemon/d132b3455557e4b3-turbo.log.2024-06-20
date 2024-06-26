@@ -1,0 +1,58 @@
+2024-06-20T12:14:32.936352Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\1.cookie"), AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:14:32.936364Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:14:33.047684Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo"), AnchoredSystemPathBuf(".turbo\\cookies\\2.cookie"), AnchoredSystemPathBuf(".turbo\\daemon")}
+2024-06-20T12:14:33.047702Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:14:34.337122Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:14:34.337143Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:15:12.244178Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\headless\\components\\Shared\\Sup.vue")}
+2024-06-20T12:15:12.244192Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:15:40.644537Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\headless\\components\\Shared\\Sup.vue")}
+2024-06-20T12:15:40.644551Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:13.646538Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\styled\\components\\Checkbox\\index.vue")}
+2024-06-20T12:22:13.646555Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:13.658121Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:22:16.147531Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\3.cookie")}
+2024-06-20T12:22:16.147543Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:16.333555Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:22:16.333566Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:16.443144Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\4.cookie")}
+2024-06-20T12:22:16.443155Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:19.937861Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:22:19.937872Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:20.338445Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs")}
+2024-06-20T12:22:20.338474Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:20.381238Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:22:21.343788Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs")}
+2024-06-20T12:22:21.343799Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:21.343852Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:22:26.441915Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\5.cookie"), AnchoredSystemPathBuf(".turbo\\cookies\\6.cookie"), AnchoredSystemPathBuf(".turbo\\cache"), AnchoredSystemPathBuf(".turbo\\cookies"), AnchoredSystemPathBuf(".turbo\\cache\\9a14d5bb10855595-meta.json"), AnchoredSystemPathBuf(".turbo\\cache\\9a14d5bb10855595.tar.zst")}
+2024-06-20T12:22:26.441925Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:29.536285Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cache\\c7e71246ceba3cc3.tar.zst"), AnchoredSystemPathBuf(".turbo\\cache\\c7e71246ceba3cc3-meta.json"), AnchoredSystemPathBuf(".turbo\\cache"), AnchoredSystemPathBuf(".turbo\\cookies\\7.cookie")}
+2024-06-20T12:22:29.536296Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:30.136041Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:22:30.136055Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:37.936775Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\styled\\components\\Badge\\index.vue")}
+2024-06-20T12:22:37.936787Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:37.948389Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:22:52.645062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\headless\\components\\Shared\\Sup.vue")}
+2024-06-20T12:22:52.645074Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:54.543547Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\8.cookie")}
+2024-06-20T12:22:54.543565Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:54.746148Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies"), AnchoredSystemPathBuf(".turbo\\cookies\\9.cookie")}
+2024-06-20T12:22:54.746159Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:22:58.943443Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs"), AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:22:58.943461Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:58.943560Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:22:59.942716Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs")}
+2024-06-20T12:22:59.942727Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:22:59.942781Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-06-20T12:23:04.934482Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\10.cookie"), AnchoredSystemPathBuf(".turbo\\cache\\bf70c9c0693d1242.tar.zst"), AnchoredSystemPathBuf(".turbo\\cookies\\11.cookie"), AnchoredSystemPathBuf(".turbo\\cache"), AnchoredSystemPathBuf(".turbo\\cache\\bf70c9c0693d1242-meta.json"), AnchoredSystemPathBuf(".turbo\\cookies")}
+2024-06-20T12:23:04.934495Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:23:07.334616Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cache\\279a3ab81c9eea15-meta.json"), AnchoredSystemPathBuf(".turbo\\cache\\279a3ab81c9eea15.tar.zst"), AnchoredSystemPathBuf(".turbo\\cache"), AnchoredSystemPathBuf(".turbo\\cookies\\12.cookie")}
+2024-06-20T12:23:07.334630Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:23:09.137358Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies"), AnchoredSystemPathBuf(".turbo\\cache")}
+2024-06-20T12:23:09.137389Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-06-20T12:23:44.533652Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\styled\\components\\Checkbox\\index.vue")}
+2024-06-20T12:23:44.533665Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
+2024-06-20T12:45:47.935063Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages\\library\\pea-vuejs\\src\\styled\\components\\Checkbox\\index.vue")}
+2024-06-20T12:45:47.935083Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("pea-vuejs"), path: AnchoredSystemPathBuf("packages\\library\\pea-vuejs") }}))
